@@ -8,17 +8,23 @@ public class StarterUtility {
     /**
      * The default delay for core services.
      */
-    public static final int DELAY_CORE = 30;
+    private static final int DELAY_CORE = 30;
+
     /**
      * The default delay for composite services.
      */
-    public static final int DELAY_COMPOSITE = 60;
+    private static final int DELAY_COMPOSITE = 60;
+
+    /**
+     * To make the delays easily deactivatable.
+     */
+    private static final boolean DELAY_ACTIVE = false;
 
     /**
      * Sleep method with a configurable wait parameter in seconds.
-     *
+     * <p>
      * Can be made public if needed.
-     *
+     * <p>
      * !!! IMPORTANT !!!
      * Method can be interrupted and therefore the delay is cannot be guaranteed.
      * !!! IMPORTANT !!!
@@ -26,6 +32,7 @@ public class StarterUtility {
      * @param seconds how long the method delays the thread
      */
     private static void delayedStart(int seconds) {
+        if (!DELAY_ACTIVE) return;
         try {
             Thread.sleep(seconds * 1000);
         } catch (InterruptedException ignored) {}
