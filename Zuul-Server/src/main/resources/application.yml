@@ -79,8 +79,8 @@ security:
     client:
       accessTokenUri: http://uaa-service/uaa/oauth/token
       userAuthorizationUri: /uaa/oauth/authorize
-      clientId: acme
-      clientSecret: acmesecret
+      clientId: iwi-Webshop
+      clientSecret: thisisverysecure
     resource:
       jwt:
         keyValue: |

@@ -26,8 +26,8 @@ public class OAuth2FeignClientConfiguration {
         resourceDetails.setUsername("special");
         resourceDetails.setPassword("special");
         resourceDetails.setAccessTokenUri("http://auth:8080/uaa/oauth/token");
-        resourceDetails.setClientId("acme");
-        resourceDetails.setClientSecret("acmesecret");
+        resourceDetails.setClientId("iwi-Webshop");
+        resourceDetails.setClientSecret("thisisverysecure");
         resourceDetails.setGrantType("password");
         resourceDetails.setScope(Collections.singletonList("openid"));
         return resourceDetails;

@@ -98,17 +98,10 @@ public class UaaServiceApplication extends WebMvcConfigurerAdapter {
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
             clients.inMemory()
-                    .withClient("acme")
-                    .secret("acmesecret")
-                    .authorizedGrantTypes("authorization_code", "refresh_token", "password")
-                    .scopes("openid")
-                    .and()
                     .withClient("iwi-Webshop")
                     .secret("thisisverysecure")
-                    .authorizedGrantTypes("authorization_code", "refresh_token")
+                    .authorizedGrantTypes("authorization_code", "refresh_token", "password")
                     .scopes("openid");
-
-
         }
 
         @Override

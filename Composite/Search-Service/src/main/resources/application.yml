@@ -23,8 +23,8 @@ security:
   oauth2:
     client:
       access-token-uri: http://auth:8080/uaa/oauth/token
-      client-id: acme
-      client-secret: acmesecret
+      client-id: iwi-Webshop
+      client-secret: thisisverysecure
       scope: openid
     resource:
       jwt:
