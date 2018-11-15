@@ -30,7 +30,7 @@ public class OauthResponseAction extends ActionSupport {
         final OAuth20Service service = new ServiceBuilder("iwi-Webshop")
                 .apiSecret("thisisverysecure")
                 .callback("http://localhost:8787/OauthResponseAction")
-                .state("testing123")
+                .state("iwi-vis")
                 .scope("openid").debug()
                 .build(WebShopApi.instance());
 
