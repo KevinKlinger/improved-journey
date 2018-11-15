@@ -78,11 +78,13 @@ services:
         links:
             - "database:database"
 
-#    turbine:
-#        build: Turbine/.
-#        links:
-#        - "eureka:eureka"
-#        - "user:user"
-#        - "category:category"
-#        - "search:search"
-#        - "zuul:zuul"
+    turbine:
+        build: Turbine/.
+        ports:
+            - "8989:8989"
+        links:
+            - "eureka:eureka"
+            - "user:user"
+            - "category:category"
+            - "search:search"
+            - "zuul:zuul"

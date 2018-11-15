@@ -1,6 +1,6 @@
 package de.hska.vis.webshop.turbine;
 
-import de.hska.vis.webshop.core.util.StarterUtility;
+//import de.hska.vis.webshop.core.util.StarterUtility;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,7 +17,7 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
 public class TurbineApplication {
 
     public static void main(String[] args) {
-        StarterUtility.delayComposite();
+        //StarterUtility.delayComposite();
 
         SpringApplication.run(TurbineApplication.class, args);
     }
