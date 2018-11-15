@@ -15,15 +15,6 @@ services:
         ports:
             - "8761:8761"
 
-    turbine:
-        build: Turbine/.
-        links:
-            - "eureka:eureka"
-            - "user:user"
-            - "category:category"
-            - "search:search"
-            - "zuul:zuul"
-
     user:
         build: Core/User-Core/.
         depends_on:
@@ -86,3 +77,12 @@ services:
             - "8080:8080"
         links:
             - "database:database"
+
+#    turbine:
+#        build: Turbine/.
+#        links:
+#        - "eureka:eureka"
+#        - "user:user"
+#        - "category:category"
+#        - "search:search"
+#        - "zuul:zuul"
