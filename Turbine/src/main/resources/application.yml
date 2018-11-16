@@ -18,15 +18,11 @@ eureka:
     hostname: localhost
     preferIpAddress: true
     leaseRenewalIntervalInSeconds: 5
-    
+    metadataMap:
+      cluster: WEBSHOP
+
 turbine:
   aggregator:
     clusterConfig: WEBSHOP
-  appConfig: USER-SERVICE, CATEGORY-SERVICE, PRODUCT-SERVICE
-  ConfigPropertyBasedDiscovery:
-    WEBSHOP:
-      instances:  USER-SERVICE
-    default:
-      instances:  USER-SERVICE
-      
- #turbine.ConfigPropertyBasedDiscovery.WEBSHOP.instances
+  appConfig: user-service,product-service,api-gateway,category-service,uaa-service,search-service
+  clusterNameExpression: metadata['cluster']

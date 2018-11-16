@@ -15,6 +15,7 @@ eureka:
     status-page-url-path: /info
     health-check-url-path: /health
     metadataMap:
+      cluster: WEBSHOP
       instanceId: "${spring.application.name}:${random.value}"
 
 security:

@@ -43,6 +43,8 @@ zuul:
 eureka:
   instance:
     preferIpAdress: true
+    metadata-map:
+      cluster: WEBSHOP
   client:
     registerWithEureka: true
     fetchRegistry: true

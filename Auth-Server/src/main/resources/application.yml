@@ -21,6 +21,7 @@ eureka:
     healthCheckUrlPath: /health
     leaseRenewalIntervalInSeconds: 5
     metadataMap:
+      cluster: WEBSHOP
       instanceId: "${spring.application.name}:${random.value}"
 
 # Define security
