@@ -88,3 +88,4 @@ services:
             - "category:category"
             - "search:search"
             - "zuul:zuul"
+            - "auth:auth"
